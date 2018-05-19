@@ -14,16 +14,18 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: "goToChat", sender: self)
-            
+
         }
-        
-        
-      
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

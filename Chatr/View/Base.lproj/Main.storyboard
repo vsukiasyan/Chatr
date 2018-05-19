@@ -13,7 +13,7 @@
         <!--Chatr-->
         <scene sceneID="hte-0i-Ndw">
             <objects>
-                <viewController id="k51-Nc-K9S" customClass="WelcomeVC" customModule="Chatr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomVC" id="k51-Nc-K9S" customClass="WelcomeVC" customModule="Chatr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhc-6N-yAA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nY9-oO-IQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="99.753694581280797"/>
+            <point key="canvasLocation" x="986.39999999999998" y="99.753694581280797"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="vO3-Y0-jpq">
@@ -156,12 +156,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtL-Fw-fzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="-242"/>
+            <point key="canvasLocation" x="2007.2" y="-242.36453201970446"/>
         </scene>
-        <!--View Controller-->
+        <!--ChatVC-->
         <scene sceneID="VfS-E3-Iz7">
             <objects>
-                <viewController id="Zjg-7r-RCG" sceneMemberID="viewController">
+                <viewController id="Zjg-7r-RCG" customClass="ChatVC" customModule="Chatr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xnb-Pf-lIS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,10 +189,8 @@
                                     <constraint firstAttribute="trailing" secondItem="TsW-T7-6h3" secondAttribute="trailing" constant="12" id="HRl-pg-c78"/>
                                     <constraint firstItem="v5k-DU-9dh" firstAttribute="top" secondItem="gb9-Yk-7nl" secondAttribute="top" constant="10" id="NEN-g9-yaA"/>
                                     <constraint firstItem="v5k-DU-9dh" firstAttribute="leading" secondItem="gb9-Yk-7nl" secondAttribute="leading" constant="8" id="O61-Kl-bWU"/>
-                                    <constraint firstAttribute="bottom" secondItem="TsW-T7-6h3" secondAttribute="bottom" constant="10" id="Pyj-Fz-WPF"/>
                                     <constraint firstItem="TsW-T7-6h3" firstAttribute="leading" secondItem="v5k-DU-9dh" secondAttribute="trailing" constant="8" id="cgb-wI-GPQ"/>
                                     <constraint firstItem="TsW-T7-6h3" firstAttribute="top" secondItem="gb9-Yk-7nl" secondAttribute="top" constant="10" id="qAg-dg-h5M"/>
-                                    <constraint firstAttribute="bottom" secondItem="v5k-DU-9dh" secondAttribute="bottom" constant="10" id="ztb-hW-Zfx"/>
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRu-58-eE2">
@@ -202,7 +200,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Chatr" id="6KK-dV-9L1">
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Ppl-Zm-8GD"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Ppl-Zm-8GD">
+                                            <connections>
+                                                <action selector="logout:" destination="Zjg-7r-RCG" id="KQ2-VP-KY9"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -236,10 +238,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B9J-Kj-D1g"/>
                     </view>
+                    <connections>
+                        <outlet property="heightConstraint" destination="B8d-dk-2ga" id="gjD-sC-DIe"/>
+                        <outlet property="messageText" destination="v5k-DU-9dh" id="Tjd-md-Qk4"/>
+                        <outlet property="sendBtn" destination="TsW-T7-6h3" id="IYp-97-CzP"/>
+                        <outlet property="tableView" destination="j3E-KE-TKf" id="VOP-q4-PX4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfr-ch-z7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="100"/>
+            <point key="canvasLocation" x="3004" y="99.753694581280797"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="GnO-yp-7zF">
@@ -326,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpV-FA-rGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="477"/>
+            <point key="canvasLocation" x="2007.2" y="476.60098522167488"/>
         </scene>
     </scenes>
     <resources>

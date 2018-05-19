@@ -11,6 +11,10 @@
 		2025E784D89668DDDA404D09 /* Pods_ChatrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14EC4FE28BDC07EB29B4259 /* Pods_ChatrUITests.framework */; };
 		678555B120AE5E3700194181 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678555B020AE5E3700194181 /* LoginVC.swift */; };
 		678555B320AE5E4500194181 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678555B220AE5E4500194181 /* RegisterVC.swift */; };
+		67D7B00A20AF7BFF00792B31 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7B00920AF7BFF00792B31 /* ChatVC.swift */; };
+		67D7B00D20AFA42F00792B31 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7B00B20AFA42F00792B31 /* CustomMessageCell.swift */; };
+		67D7B00E20AFA42F00792B31 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67D7B00C20AFA42F00792B31 /* MessageCell.xib */; };
+		67D7B01020AFA44B00792B31 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7B00F20AFA44B00792B31 /* Message.swift */; };
 		67F9195B20AE4079007432A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F9195A20AE4079007432A5 /* AppDelegate.swift */; };
 		67F9195D20AE4079007432A5 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F9195C20AE4079007432A5 /* WelcomeVC.swift */; };
 		67F9196020AE4079007432A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F9195E20AE4079007432A5 /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 		48F5832084FA0E0643062325 /* Pods-ChatrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatrUITests/Pods-ChatrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		678555B020AE5E3700194181 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		678555B220AE5E4500194181 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		67D7B00920AF7BFF00792B31 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		67D7B00B20AFA42F00792B31 /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomMessageCell.swift; path = "../../../../iOS_Dev_Vids/Udemy - IOS 11 app development bootcamp/16 Cloud Database_ iOS Animations and Advanced Swift - Make a WhatsApp Clone/Flash-Chat-iOS11/Flash Chat/CustomMessageCell.swift"; sourceTree = "<group>"; };
+		67D7B00C20AFA42F00792B31 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = "../../../../iOS_Dev_Vids/Udemy - IOS 11 app development bootcamp/16 Cloud Database_ iOS Animations and Advanced Swift - Make a WhatsApp Clone/Flash-Chat-iOS11/Flash Chat/MessageCell.xib"; sourceTree = "<group>"; };
+		67D7B00F20AFA44B00792B31 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = "../../../../iOS_Dev_Vids/Udemy - IOS 11 app development bootcamp/16 Cloud Database_ iOS Animations and Advanced Swift - Make a WhatsApp Clone/Flash-Chat-iOS11/Flash Chat/Message.swift"; sourceTree = "<group>"; };
 		67F9195720AE4079007432A5 /* Chatr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F9195A20AE4079007432A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F9195C20AE4079007432A5 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 				67F9195C20AE4079007432A5 /* WelcomeVC.swift */,
 				678555B020AE5E3700194181 /* LoginVC.swift */,
 				678555B220AE5E4500194181 /* RegisterVC.swift */,
+				67D7B00920AF7BFF00792B31 /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				67F9195E20AE4079007432A5 /* Main.storyboard */,
+				67D7B00B20AFA42F00792B31 /* CustomMessageCell.swift */,
+				67D7B00C20AFA42F00792B31 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 		678555AF20AE46FE00194181 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				67D7B00F20AFA44B00792B31 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D7B00E20AFA42F00792B31 /* MessageCell.xib in Resources */,
 				67F9196820AE4079007432A5 /* LaunchScreen.storyboard in Resources */,
 				67F9198C20AE4153007432A5 /* GoogleService-Info.plist in Resources */,
 				67F9196520AE4079007432A5 /* Assets.xcassets in Resources */,
@@ -505,9 +518,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D7B00D20AFA42F00792B31 /* CustomMessageCell.swift in Sources */,
+				67D7B00A20AF7BFF00792B31 /* ChatVC.swift in Sources */,
 				67F9195D20AE4079007432A5 /* WelcomeVC.swift in Sources */,
 				67F9195B20AE4079007432A5 /* AppDelegate.swift in Sources */,
 				678555B120AE5E3700194181 /* LoginVC.swift in Sources */,
+				67D7B01020AFA44B00792B31 /* Message.swift in Sources */,
 				67F9196320AE4079007432A5 /* Chatr.xcdatamodeld in Sources */,
 				678555B320AE5E4500194181 /* RegisterVC.swift in Sources */,
 			);
